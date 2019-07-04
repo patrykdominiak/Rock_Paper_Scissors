@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    background-image:  url(images/pattern.png);
+    color: white;
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15rem;
+    text-align: center;
+}
+
+.restart-btn {
+    display: inline-block;
+    background: rgb(88, 88, 88, 0.6);
+    color: white;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: solid white 1px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.restart-btn:hover {
+    background: rgba(131, 0, 56, 0.6);
+    color: white;
+}
+
+.header {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header h1 {
+    margin-bottom: 1rem;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.2rem;
+}
+
+.score p:first-child {
+    background:  rgba(41, 1, 46, 0.9);
+    border-radius: 10px;
+}
+
+.score p:last-child {
+    background:  rgba(218, 1, 46, 0.9);
+    border-radius: 10px;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.choice {
+    cursor: pointer;
+}
+
+.choice:hover {
+    color:  rgba(41, 1, 46, 0.7);
+}
+
+.text-win {
+    color: rgba(75, 201, 46, 1);
+}
+
+.text-lose {
+   color: rgba(231, 76, 60, 1); 
+}
+
+@media (max-width: 700px) {
+    .choice {
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 500px) {
+    .choice {
+        font-size: 80px;
+    }
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    background: rgb(88, 88, 88);
+    text-align: center;
+    margin: 10% auto;
+    width: 350px;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal-content h1 {
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    font-size: 1.2 rem;
+    margin-top: 1rem;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgb(88, 88, 88, 0.8);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 10px;
+}
